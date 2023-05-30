@@ -1,8 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles/App.scss';
+import Home from './components/pages/Home';
 
 function App() {
   return (
-    <h1>Github Metrics</h1>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Home />} />
+          <Route path="forked_repo/:id" element={<Details />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

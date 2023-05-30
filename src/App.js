@@ -1,18 +1,21 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles/App.scss';
 import Home from './components/pages/Home';
+import Details from './components/pages/Details';
+import Nav from './components/Nav';
 
 function App() {
   return (
-
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Header />}>
-          <Route index element={<Home />} />
-          <Route path="forked_repo/:id" element={<Details />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Nav />}>
+            <Route index element={<Home />} />
+            <Route path="repo_details/:id" element={<Details />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -20,42 +20,40 @@ const Details = () => {
   console.log(details);
 
   if (details.message) {
-    return (<p>{`API Error: ${details.message}`}</p>);
+    return (<p className="error-message">{`API Error: ${details.message}`}</p>);
   }
   if (status === 'succeeded') {
     return (
       <div>
         {details && (
-        <div>
-          <h1>{details.full_name}</h1>
-          <p>
+        <div className="details-container">
+
+          <figure className="row-container">
+            <img className="owner-avatar" src={details.owner.avatar_url} alt={details.owner.login} />
+            <figcaption className="owner-name">
+              Owner GH Handle:
+              <a href={details.owner.html_url}>
+                {` @${details.owner.login}`}
+              </a>
+            </figcaption>
+          </figure>
+
+          <p className="row-container">
             Repository description:
             {' '}
             {details.description}
           </p>
-
-          <figure>
-            <img src={details.owner.avatar_url} alt={details.owner.login} />
-            <figcaption>
-              <a href={details.owner.html_url}>
-                {`Owner GH Handle: @
-        ${details.owner.login}`}
-              </a>
-            </figcaption>
-          </figure>
-          {/*
-      */}
-          <p>
+          <p className="row-container">
             <strong>Stars:</strong>
             {' '}
             {details.stargazers_count}
           </p>
-          <p>
+          <p className="row-container">
             <strong>Forks:</strong>
             {' '}
             {details.forks_count}
           </p>
-          <p>
+          <p className="row-container">
             <strong>GitHub Link:</strong>
             {' '}
             <a href={details.html_url}>{details.html_url}</a>

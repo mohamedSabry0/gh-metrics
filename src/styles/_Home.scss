@@ -1,6 +1,5 @@
 a {
   text-decoration: none;
-  color: $lightest-main;
 }
 
 .repo-card {
@@ -8,7 +7,9 @@ a {
   border-radius: 5px;
   padding: 10px;
   background-color: $main;
-  color: $white;
+  a {
+    color: $white;
+  }
 }
 
 .repo-card:nth-child(even) {

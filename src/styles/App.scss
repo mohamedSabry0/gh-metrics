@@ -1,8 +1,13 @@
 @import './colors';
+@import './nav';
 @import './Home';
+@import './Details';
+
+body {
+  background-color: $main;
+}
 
 .App {
   padding: 2rem;
-  background-color: $dark-main;
   color: $white;
 }

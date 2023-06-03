@@ -1,26 +1,73 @@
-.repos-list {
+.lists-container {
+  display: flex;
+}
+
+.repos1-list,
+.repos2-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 50%;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $lightest-main;
+  .home-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
 }
 
 a {
   text-decoration: none;
 }
 
-.repo-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: $main;
+.details-link {
+  color: $white;
+}
 
-  a {
-    color: $white;
+.repo-card {
+  padding: 10px;
+  background-color: $dark1-main;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .repo-logo {
+    height: 150px;
+  }
+  .count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: right;
+    padding: 20% 0 0 0;
+  }
+  &:hover {
+    background-color: $light-main;
   }
 }
 
-.repo-card:nth-child(even) {
-  background-color: $light-main;
+.repos1-list .repo-card:nth-child(even) {
+  background-color: $dark2-main;
+  &:hover {
+    background-color: $light-main;
+  }
+}
+.repos2-list .repo-card:nth-child(odd) {
+  background-color: $dark2-main;
+  &:hover {
+    background-color: $light-main;
+  }
+}
+
+.filter-container {
+  background-color: $darkest-main;
+  padding: 10px;
 }
 
 .filter-input {
@@ -28,7 +75,6 @@ a {
   background-color: #efefef;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
 }

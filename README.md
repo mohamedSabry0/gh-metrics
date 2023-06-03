@@ -177,6 +177,7 @@ If you like this project it would be truly appreciated if you give it a ⭐️.
 I am grateful for these resources as they were a reason that I obtained a glimpse of their abundance of knowledge:
 
 - [Microverse](https://www.microverse.org/)
+- This is inspired by this [design](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>) by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 - [ReactJS Docs](https://reactjs.org/docs)
 - [React Router Docs](https://reactrouter.com/en/main)
 - [Redux toolkit usage guide](https://redux-toolkit.js.org/usage/usage-guide)

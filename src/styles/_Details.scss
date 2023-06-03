@@ -2,6 +2,11 @@
   overflow-wrap: break-word;
 }
 
+.owner-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .error-message {
   background-color: #fdcfd3;
   color: #9c0008;
@@ -34,13 +39,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: $main;
-  padding: 10px;
+  background-color: $dark1-main;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   width: 100%;
   border: 1px solid $main;
-  margin: 10px 0;
-
+  margin: 0;
   a {
     color: $white;
 
@@ -54,5 +58,5 @@
 }
 
 .row-container:nth-child(even) {
-  background-color: $main;
+  background-color: $dark2-main;
 }

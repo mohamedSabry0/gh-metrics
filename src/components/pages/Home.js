@@ -31,7 +31,7 @@ const Home = () => {
       {list && list.map(({
         id, owner, forks,
       }) => (
-        <li key={id} className="repo-card">
+        <li key={id} className="repo-card bld-up ">
           <Link
             className="details-link"
             to={`/repo_details/${owner}`}
@@ -50,7 +50,7 @@ const Home = () => {
 
   return (
     <>
-      <header className="home-header">
+      <header className="home-header bld-up">
         <img className="home-img" src={githubLogo} alt="github logo" />
         <h1 className="title">
           freeCodeCamp
@@ -60,9 +60,9 @@ const Home = () => {
       </header>
       <div className="filter-container">
         <input
-          className="filter-input"
+          className="filter-input ctrl-font"
           type="text"
-          placeholder="filter by fork count..."
+          placeholder="Filter by fork count..."
           onChange={(e) => {
             dispatch(filterRepos(e.target.value));
           }}

@@ -27,7 +27,7 @@ const Details = () => {
         {details && (
         <div className="details-container">
 
-          <figure className="row-container">
+          <figure className="row-container bld-up">
             <img className="owner-avatar" src={details.owner.avatar_url} alt={details.owner.login} />
             <figcaption className="owner-name">
               Owner GH Handle:

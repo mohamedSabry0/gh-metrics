@@ -7,6 +7,15 @@ body {
   background-color: $main;
 }
 
+body,
+.title {
+  font-family: 'gill-sans', sans-serif;
+}
+
+.ctrl-font {
+  font-family: 'Lato', sans-serif;
+}
+
 .App {
   color: $white;
 }

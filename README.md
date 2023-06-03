@@ -31,13 +31,10 @@
   - [🔭 Future Features ](#-future-features-)
   - [Acknowledgements ](#acknowledgements-)
   - [📝 License ](#-license-)
-  <!-- - [❓ FAQ (OPTIONAL)](#faq) -->
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
 
 # 📖 GitHub Metrics <a name="about-project"></a>
 
-**Bookstore** is a simple Bookstore app built with <a href="https://reactjs.org/">React.js</a>
+**GitHub Metrics** is a simple metrics app built with <a href="https://reactjs.org/">React.js</a>
 
 > Due to the time constraint, and github API limitations, only metrics about forks of a popular repository will be displayed.
 
@@ -72,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://bookstore-615c.onrender.com)
+- [Live Demo Link](https://gh-metrics.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +97,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:mohamedSabry0/bookstore.git
+  git clone git@github.com:mohamedSabry0/gh-metrics.git
 ```
 
 ### Install
@@ -108,7 +105,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd bookstore
+  cd gh-metrics
   npm i
 ```
 
@@ -147,24 +144,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!--
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mohamedSabry0/bookstore/issues).
+Feel free to check the [issues page](https://github.com/mohamedSabry0/gh-metrics/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,8 +165,7 @@ If you like this project it would be truly appreciated if you give it a ⭐️.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Improve Styling]**
-- [ ] **[Add Tags]**
-- [ ] **[Autofill author input from previous inputs]**
+- [ ] **[Add Search by name]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

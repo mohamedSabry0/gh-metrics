@@ -1,10 +1,6 @@
 * {
   overflow-wrap: break-word;
-}
-
-.owner-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  box-sizing: border-box;
 }
 
 .error-message {
@@ -24,27 +20,31 @@
 }
 
 .owner-avatar {
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
 }
 
 .owner-name {
   border-radius: 0.5rem;
   padding: 0.5rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
 .row-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   background-color: $dark1-main;
   padding: 1.5rem;
-  border-radius: 0.5rem;
   width: 100%;
-  border: 1px solid $main;
   margin: 0;
+  font-weight: bold;
+
+  strong {
+    padding-right: 0.5rem;
+  }
+
   a {
     color: $white;
 
@@ -52,9 +52,13 @@
       background-color: $lightest-main;
       border-radius: 0.5rem;
     }
-
-    padding: 0.3rem;
   }
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: $lightest-main;
 }
 
 .row-container:nth-child(even) {

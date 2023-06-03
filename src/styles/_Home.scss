@@ -15,6 +15,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: $lightest-main;
+
   .home-img {
     width: 100px;
     height: 100px;
@@ -43,31 +44,25 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .repo-logo {
     height: 150px;
   }
+
   .count {
     font-size: 1.5rem;
     font-weight: bold;
     float: right;
     padding: 20% 0 0 0;
   }
-  &:hover {
-    background-color: $light-main;
-  }
 }
 
 .repos1-list .repo-card:nth-child(even) {
   background-color: $dark2-main;
-  &:hover {
-    background-color: $light-main;
-  }
 }
+
 .repos2-list .repo-card:nth-child(odd) {
   background-color: $dark2-main;
-  &:hover {
-    background-color: $light-main;
-  }
 }
 
 .filter-container {

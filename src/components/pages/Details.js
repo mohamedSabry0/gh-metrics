@@ -27,7 +27,7 @@ const Details = () => {
         {details && (
         <div className="details-container">
 
-          <figure className="row-container bld-up">
+          <figure className="row-container bld-up header">
             <img className="owner-avatar" src={details.owner.avatar_url} alt={details.owner.login} />
             <figcaption className="owner-name">
               Owner GH Handle:
@@ -38,13 +38,13 @@ const Details = () => {
           </figure>
 
           <p className="row-container">
-            Repository description:
+            <strong>Repository description:</strong>
             {' '}
             {details.description}
           </p>
           <p className="row-container">
             <strong>Stars:</strong>
-            {' '}
+            {'  '}
             {details.stargazers_count}
           </p>
           <p className="row-container">

@@ -3,7 +3,7 @@ import fetchRepos from './repositoriesThunk';
 
 const initialState = {
   repos: [],
-  filterRepos: [],
+  filteredRepos: [],
 };
 
 const repositoriesSlice = createSlice({

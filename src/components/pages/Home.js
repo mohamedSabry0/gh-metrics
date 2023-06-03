@@ -5,14 +5,15 @@ import fetchRepos from '../../redux/repositories/repositoriesThunk';
 import { filterRepos } from '../../redux/repositories/repositoriesSlice';
 
 const Home = () => {
+  let repos = useSelector((state) => state.repos.repos);
   const filteredRepos = useSelector((state) => state.repos.filteredRepos);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchRepos());
-    dispatch(filterRepos(0));
   }, [dispatch]);
-
+  if (filteredRepos.length > 0) {
+    repos = filteredRepos;
+  }
   return (
     <>
       <input
@@ -25,7 +26,7 @@ const Home = () => {
       />
 
       <ul className="repos-list">
-        {filteredRepos && filteredRepos.map(({
+        {repos && repos.map(({
           id, owner, stars, forks,
         }) => (
           <li key={id} className="repo-card">

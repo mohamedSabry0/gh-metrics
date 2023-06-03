@@ -8,20 +8,21 @@ const initialState = {
 const repositoriesSlice = createSlice({
   name: 'repositories',
   initialState,
-  reducers: {},
+  reducers: {
+  },
   extraReducers: {
     [fetchRepos.fulfilled]: (state, { payload }) => {
       state.repos = payload.map((repo) => ({
         id: repo.id,
-        name: repo.full_name,
-        description: repo.description,
+        name: repo.name,
         owner: repo.owner.login,
         stars: repo.stargazers_count,
         forks: repo.forks_count,
-        link: repo.html_url,
       }));
     },
   },
 });
 
+export { fetchRepos };
+export const { selectRepo } = repositoriesSlice.actions;
 export default repositoriesSlice.reducer;

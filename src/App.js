@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Nav />}>
             <Route index element={<Home />} />
-            <Route path="repo_details/:id" element={<Details />} />
+            <Route path="repo_details/:owner" element={<Details />} />
           </Route>
         </Routes>
       </BrowserRouter>

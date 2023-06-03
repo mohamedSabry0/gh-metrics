@@ -2,9 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import fetchRepos from '../../redux/repositories/repositoriesThunk';
-import '../../styles/Home.scss';
 
-// here a component called Home is created
 const Home = () => {
   const repos = useSelector((state) => state.repos.repos);
   const dispatch = useDispatch();
@@ -14,12 +12,19 @@ const Home = () => {
       dispatch(fetchRepos());
     }
   }, [dispatch, repos.length]);
+
   return (
     <div>
       {repos.map((repo) => (
-        <Link key={repo.name} to={`/repo_details/${repo.id}`}>
-          <div className="repo-card">
-            <h2>{repo.name}</h2>
+        <div key={repo.id} className="repo-card">
+          <Link
+            to={`/repo_details/${repo.owner}`}
+          >
+            <h1>
+              {repo.owner}
+              {' '}
+              Fork
+            </h1>
             <p>
               Stars Count:
               {repo.stars}
@@ -28,8 +33,8 @@ const Home = () => {
               Fork Count:
               {repo.forks}
             </p>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ))}
     </div>
   );

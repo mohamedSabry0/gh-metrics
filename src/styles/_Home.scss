@@ -1,0 +1,16 @@
+a {
+  text-decoration: none;
+  color: $lightest-main;
+}
+
+.repo-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: $main;
+  color: $white;
+}
+
+.repo-card:nth-child(even) {
+  background-color: $light-main;
+}

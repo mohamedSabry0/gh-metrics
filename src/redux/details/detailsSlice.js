@@ -11,15 +11,17 @@ const detailsSlice = createSlice({
   name: 'details',
   initialState,
   reducers: {},
-  extraReducers: {
-    [fetchDetails.fulfilled]: (state, { payload }) => {
-      console.log(payload);
-      state.details = payload;
-      state.status = 'succeeded';
-    },
-    [fetchDetails.pending]: (state) => {
-      state.status = 'loading';
-    },
+  extraReducers(builder) {
+    builder
+      .addCase(fetchDetails.fulfilled, (state, { payload }) => ({
+        ...state,
+        details: payload,
+        status: 'succeeded',
+      }))
+      .addCase(fetchDetails.pending, (state) => ({
+        ...state,
+        status: 'loading',
+      }));
   },
 });
 

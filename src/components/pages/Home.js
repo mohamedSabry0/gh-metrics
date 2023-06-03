@@ -8,35 +8,36 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (repos.length === 0) {
-      dispatch(fetchRepos());
-    }
-  }, [dispatch, repos.length]);
+    dispatch(fetchRepos());
+  }, [dispatch]);
 
   return (
-    <div>
-      {repos.map((repo) => (
-        <div key={repo.id} className="repo-card">
+    <ul className="repos-list">
+      {repos && repos.map(({
+        id, owner, stars, forks,
+      }) => (
+        <li key={id} className="repo-card">
           <Link
-            to={`/repo_details/${repo.owner}`}
+            to={`/repo_details/${owner}`}
           >
             <h1>
-              {repo.owner}
+              {owner}
               {' '}
               Fork
             </h1>
             <p>
               Stars Count:
-              {repo.stars}
+              {stars}
             </p>
             <p>
               Fork Count:
-              {repo.forks}
+              {forks}
             </p>
           </Link>
-        </div>
+
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

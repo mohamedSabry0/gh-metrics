@@ -7,7 +7,6 @@ const fetchRepos = createAsyncThunk('repositories/fetchRepositories', async () =
     .then((data) => data.json()).catch((error) => {
       throw new Error(`HTTP error! Error: ${error}`);
     });
-  console.log(repos);
   return repos;
 });
 

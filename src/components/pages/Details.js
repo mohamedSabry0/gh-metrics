@@ -17,7 +17,6 @@ const Details = () => {
   }, [dispatch, owner]);
 
   const { details, status } = useSelector((state) => state.details);
-  console.log(details);
 
   if (details.message) {
     return (<p className="error-message">{`API Error: ${details.message}`}</p>);

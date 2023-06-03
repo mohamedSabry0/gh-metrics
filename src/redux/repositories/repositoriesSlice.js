@@ -10,16 +10,23 @@ const repositoriesSlice = createSlice({
   initialState,
   reducers: {
   },
-  extraReducers: {
-    [fetchRepos.fulfilled]: (state, { payload }) => {
-      state.repos = payload.map((repo) => ({
-        id: repo.id,
-        name: repo.name,
-        owner: repo.owner.login,
-        stars: repo.stargazers_count,
-        forks: repo.forks_count,
+  extraReducers(builder) {
+    builder
+      .addCase(fetchRepos.fulfilled, (state, { payload }) => ({
+        ...state,
+        repos: payload.map((repo) => ({
+          id: repo.id,
+          name: repo.name,
+          owner: repo.owner.login,
+          stars: repo.stargazers_count,
+          forks: repo.forks_count,
+          status: 'succeeded',
+        })),
+      }))
+      .addCase(fetchRepos.pending, (state) => ({
+        ...state,
+        status: 'loading',
       }));
-    },
   },
 });
 

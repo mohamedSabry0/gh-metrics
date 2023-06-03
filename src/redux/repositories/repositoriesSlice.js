@@ -3,12 +3,17 @@ import fetchRepos from './repositoriesThunk';
 
 const initialState = {
   repos: [],
+  filterRepos: [],
 };
 
 const repositoriesSlice = createSlice({
   name: 'repositories',
   initialState,
   reducers: {
+    filterRepos: (state, { payload }) => ({
+      ...state,
+      filteredRepos: state.repos.filter((repo) => repo.forks >= payload),
+    }),
   },
   extraReducers(builder) {
     builder
@@ -31,5 +36,5 @@ const repositoriesSlice = createSlice({
 });
 
 export { fetchRepos };
-export const { selectRepo } = repositoriesSlice.actions;
+export const { filterRepos } = repositoriesSlice.actions;
 export default repositoriesSlice.reducer;

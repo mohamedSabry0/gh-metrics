@@ -21,3 +21,13 @@ a {
 .repo-card:nth-child(even) {
   background-color: $light-main;
 }
+
+.filter-input {
+  border: 1px solid $main;
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}

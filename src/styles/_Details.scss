@@ -40,12 +40,15 @@
   width: 100%;
   border: 1px solid $dark-main;
   margin: 10px 0;
+
   a {
     color: $white;
+
     &:hover {
       background-color: $lightest-main;
       border-radius: 0.5rem;
     }
+
     padding: 0.3rem;
   }
 }

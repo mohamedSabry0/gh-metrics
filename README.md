@@ -4,14 +4,14 @@
   <!-- <img src="./app_screenshot.png" alt="logo" width="140"  height="auto" />
   <br/> -->
 
-  <h3><b>Bookstore</b></h3>
+  <h3><b>GitHub Metrics App</b></h3>
 
 </div>
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 Bookstore ](#-bookstore-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 GitHub Metrics ](#-github-metrics-)
   - [Screenshot ](#screenshot-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -31,11 +31,11 @@
   - [🔭 Future Features ](#-future-features-)
   - [Acknowledgements ](#acknowledgements-)
   - [📝 License ](#-license-)
-<!-- - [❓ FAQ (OPTIONAL)](#faq) -->
+  <!-- - [❓ FAQ (OPTIONAL)](#faq) -->
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Bookstore <a name="about-project"></a>
+# 📖 GitHub Metrics <a name="about-project"></a>
 
 **Bookstore** is a simple Bookstore app built with <a href="https://reactjs.org/">React.js</a>
 

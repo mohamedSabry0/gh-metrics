@@ -5,6 +5,7 @@ import fetchRepos from '../../redux/repositories/repositoriesThunk';
 import { filterRepos } from '../../redux/repositories/repositoriesSlice';
 import githubLogo from '../../assets/211904_social_github_icon.svg';
 import FCCLogo from '../../assets/4691243_freecodecamp_icon.svg';
+import rightArrow from '../../assets/9004680_arrow_right_arrows_move_icon.svg';
 
 const Home = () => {
   let repos = useSelector((state) => state.repos.repos);
@@ -36,6 +37,7 @@ const Home = () => {
             className="details-link"
             to={`/repo_details/${owner}`}
           >
+            <img className="arrow" src={rightArrow} alt="right arrow" />
             <img className="repo-logo" src={FCCLogo} alt="freeCodeCamp logo" />
             <p className="count">
               Fork Count:

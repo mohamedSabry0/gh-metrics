@@ -30,6 +30,9 @@ a {
 
 .details-link {
   color: $white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .bld-up {
@@ -42,18 +45,21 @@ a {
   background-color: $dark1-main;
   height: 150px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 
   .repo-logo {
-    height: 150px;
+    align-self: flex-start;
+    min-width: 60px;
+    width: 40%;
+    max-width: 150px;
   }
 
   .count {
     font-size: 1.5rem;
     font-weight: bold;
     float: right;
-    padding: 20% 0 0 0;
+    margin: 0;
+    align-self: flex-end;
   }
 }
 
